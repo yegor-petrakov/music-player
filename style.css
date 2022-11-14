@@ -1,0 +1,147 @@
+body {
+  background-color: rgb(199, 199, 199);
+  font-family: 'League Spartan', sans-serif;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.music-player {
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+}
+
+.music-player__inner {
+  padding: 10px;
+  padding-bottom: 40px;
+}
+
+.music-player__image {
+  width: 400px;
+  height: 400px;
+}
+
+.music-player__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+
+.music-player__title {
+  font-size: 25px;
+  line-height: 30px;
+  padding-block: 10px 3px;
+  font-weight: 400;
+  margin-top: 15px;
+  color: rgb(0, 0, 0);
+}
+
+.music-player__artist {
+  line-height: 20px;
+  margin-bottom: 30px;
+  color: rgba(88, 88, 88, 0.719);
+}
+
+
+/* progress bar */
+.progress {
+  display: flex;
+  justify-content: center;
+}
+
+.progress-container {
+  background-color: rgb(180, 180, 180);
+  height: 4px;
+  width: 95%;
+  border-radius: 100vmax;
+}
+
+.progress-line {
+  background-color: rgb(37, 37, 37);
+  height: 4px;
+  width: 40%;
+  border-radius: inherit;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-line::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 100vmax;
+  background-color: rgb(37, 37, 37);
+  top: -5px;
+  right: -4px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.progress-line:active::after {
+  transform: scale(.9);
+}
+
+
+/* controls */
+.music-player__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.fas {
+  margin-inline: 10px;
+  cursor: pointer;
+  color: rgb(37, 37, 37);
+}
+
+.fa-play,
+.fa-pause {
+  background-color: rgb(37, 37, 37);
+  padding: 15px 17px;
+  border-radius: 100vmax;
+  color: rgb(255, 255, 255);
+}
+
+
+@media (max-width: 435px) {
+  .music-player {
+    border-radius: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .music-player__image {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  .music-player__title {
+    font-size: 20px;
+    line-height: 30px;
+    padding-block: 10px 3px;
+    font-weight: 400;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+  }
+
+  .music-player__artist {
+    line-height: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: rgba(88, 88, 88, 0.719);
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Music Player</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="music-player">
+            <div class="music-player__inner">
+
+                <!-- Album cover image -->
+                <div class="music-player__image">
+                    <img src="./img/find-your-line.jpg" alt="Album">
+                </div>
+
+                <!-- Album meta -->
+                <p class="music-player__title" id="title">Moon over the castle</p>
+                <p class="music-player__artist" id="artist">Bring me the Horizon</p>
+
+                <!-- Song progress bar -->
+                <audio src="music/jacinto-1.mp3"></audio>
+                <div class="progress">
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress-line" id="progress"></div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="music-player__controls">
+                    <i class="fas fa-backward" id="prev" title="Previous"></i>
+                    <i class="fas fa-play main-button" id="play" title="Play"></i>
+                    <i class="fas fa-forward" id="next" title="Next"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
